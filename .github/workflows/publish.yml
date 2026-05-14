@@ -1,0 +1,46 @@
+name: Pack & Publish NuGet
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Extract version from tag
+        id: version
+        # Strips the leading 'v' so tag v1.2.3 becomes version 1.2.3
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Restore
+        run: dotnet restore Onspay.Packages.sln
+
+      - name: Build
+        run: dotnet build Onspay.Packages.sln -c Release --no-restore
+
+      - name: Pack
+        run: >
+          dotnet pack Onspay.Packages.sln
+          -c Release
+          --no-build
+          -p:Version=${{ steps.version.outputs.VERSION }}
+
+      - name: Push to NuGet.org
+        run: |
+          find . -name "*.nupkg" -path "*/Release/*" \
+            | xargs -I{} dotnet nuget push {} \
+                --api-key ${{ secrets.NUGET_API_KEY }} \
+                --source https://api.nuget.org/v3/index.json \
+                --skip-duplicate

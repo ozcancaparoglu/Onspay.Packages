@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.Infrastructure.DomainEvents</PackageId>
+    <Description>DomainEventDispatcher, DomainEventDbContextBase (EF Core base with SaveChanges dispatch), and DateTimeProvider.</Description>
+    <PackageTags>ddd;domain-events;ef-core;dispatcher</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onspay.Cqrs\Onspay.Cqrs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.4" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.AspNetCore</PackageId>
+    <Description>ASP.NET Core utilities: GlobalExceptionHandler, CustomResults (Result-to-ProblemDetails), RequestContextLoggingMiddleware, IEndpoint pattern, and Result Match extensions.</Description>
+    <PackageTags>aspnetcore;minimal-api;exception-handling;problem-details;result;endpoint</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onspay.SharedKernel\Onspay.SharedKernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Serilog" Version="4.3.1" />
+  </ItemGroup>
+
+</Project>

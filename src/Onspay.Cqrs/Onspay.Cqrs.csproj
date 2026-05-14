@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.Cqrs</PackageId>
+    <Description>CQRS interfaces (ICommand, IQuery, handlers), inbox message handler base, SQL connection factory abstraction, and ConcurrencyException.</Description>
+    <PackageTags>cqrs;command;query;inbox;ddd</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onspay.SharedKernel\Onspay.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

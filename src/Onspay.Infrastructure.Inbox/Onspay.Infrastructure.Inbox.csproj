@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.Infrastructure.Inbox</PackageId>
+    <Description>Inbox pattern: InboxMessage entity, EF Core configuration, IInboxDbContext, ProcessInboxMessagesJob (Quartz + Dapper), and InboxOptions.</Description>
+    <PackageTags>inbox;outbox;quartz;dapper;idempotency;messaging</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onspay.Cqrs\Onspay.Cqrs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.72" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.4" />
+    <PackageReference Include="Quartz" Version="3.18.1" />
+    <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.18.1" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.18.1" />
+  </ItemGroup>
+
+</Project>

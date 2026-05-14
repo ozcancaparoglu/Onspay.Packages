@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.Cqrs.Behaviors</PackageId>
+    <Description>Validation and logging decorators for CQRS handlers, plus the AddCqrs DI extension that auto-registers handlers and wires decorators via Scrutor.</Description>
+    <PackageTags>cqrs;decorator;validation;logging;scrutor;fluentvalidation</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onspay.Cqrs\Onspay.Cqrs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
+    <PackageReference Include="Scrutor" Version="7.0.0" />
+    <PackageReference Include="Serilog" Version="4.3.1" />
+  </ItemGroup>
+
+</Project>

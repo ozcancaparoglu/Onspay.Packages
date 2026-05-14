@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Onspay.SharedKernel</PackageId>
+    <Description>Shared kernel primitives: Result, Error, Entity, domain event abstractions, and IDateTimeProvider.</Description>
+    <PackageTags>ddd;cqrs;result;shared-kernel</PackageTags>
+  </PropertyGroup>
+
+</Project>
