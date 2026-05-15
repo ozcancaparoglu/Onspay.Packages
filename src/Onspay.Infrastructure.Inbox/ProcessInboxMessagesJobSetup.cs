@@ -12,7 +12,9 @@ internal sealed class ProcessInboxMessagesJobSetup(IOptions<InboxOptions> inboxO
     {
         const string jobName = nameof(ProcessInboxMessagesJob);
         options
-            .AddJob<ProcessInboxMessagesJob>(configure => configure.WithIdentity(jobName))
+            .AddJob<ProcessInboxMessagesJob>(configure => configure
+                .WithIdentity(jobName)
+                .StoreDurably())
             .AddTrigger(configure =>
                 configure
                     .ForJob(jobName)

@@ -12,7 +12,9 @@ internal sealed class ProcessOutboxMessagesJobSetup(IOptions<OutboxOptions> outb
     {
         const string jobName = nameof(ProcessOutboxMessagesJob);
         options
-            .AddJob<ProcessOutboxMessagesJob>(configure => configure.WithIdentity(jobName))
+            .AddJob<ProcessOutboxMessagesJob>(configure => configure
+                .WithIdentity(jobName)
+                .StoreDurably())
             .AddTrigger(configure =>
                 configure
                     .ForJob(jobName)
