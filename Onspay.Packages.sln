@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onspay.Infrastructure.Inbox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onspay.Infrastructure.Outbox", "src\Onspay.Infrastructure.Outbox\Onspay.Infrastructure.Outbox.csproj", "{8706FF2F-DF8E-410A-A42B-BB0E2A02C02A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onspay.Infrastructure.Messaging.RabbitMq", "src\Onspay.Infrastructure.Messaging.RabbitMq\Onspay.Infrastructure.Messaging.RabbitMq.csproj", "{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,18 @@ Global
 		{8706FF2F-DF8E-410A-A42B-BB0E2A02C02A}.Release|x64.Build.0 = Release|Any CPU
 		{8706FF2F-DF8E-410A-A42B-BB0E2A02C02A}.Release|x86.ActiveCfg = Release|Any CPU
 		{8706FF2F-DF8E-410A-A42B-BB0E2A02C02A}.Release|x86.Build.0 = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|x64.Build.0 = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,5 +139,6 @@ Global
 		{5CE0D60B-B989-442E-8928-0110E5CA08D1} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{59AE4054-94F9-464B-BCB0-D6D61316B31B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{8706FF2F-DF8E-410A-A42B-BB0E2A02C02A} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{6A06BC5F-BB09-4BBC-B8DE-1D83CDA475F7} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
